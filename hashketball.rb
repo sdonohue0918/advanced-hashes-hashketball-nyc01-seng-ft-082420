@@ -190,7 +190,6 @@ def player_stats(person)
         player_hash.each do |player|
 
           if person == player[:player_name]
-            player.delete(:player_name)
             return player
 
           end
