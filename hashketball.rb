@@ -1,4 +1,8 @@
 # Write your code below game_hash
+require 'pry'
+
+
+
 def game_hash
   {
     home: {
@@ -126,4 +130,72 @@ def game_hash
   }
 end
 
-# Write code here
+def num_points_scored(player)
+  game_hash.each do |vs_hash, team_values|
+    team_values[:players].each do |player_array|
+      if player_array[:player_name] == player
+        return player_array[:points]
+        binding.pry
+      end
+    end
+  end
+end
+
+def shoe_size(player)
+  game_hash.each do |vs_hash, team_values|
+    team_values[:players].each do |player_array|
+      if player_array[:player_name] == player
+        return player_array[:shoe]
+      end
+    end
+  end
+end
+
+def team_colors(franchise)
+  ret_array = []
+  game_hash.each do |vs_hash, team_values|
+    if team_values[:team_name] == franchise
+      return team_values[:colors]
+    end
+  end
+end
+
+def team_names
+  teams = []
+  game_hash.each do |vs_hash, team_values|
+    teams << team_values[:team_name]
+    end
+    return teams
+end
+
+def player_numbers(franchise)
+  jersey_numbers = []
+  game_hash.each do |vs_hash, team_values|
+    team_values[:players].each do |player_array|
+      if team_values[:team_name] == franchise
+        jersey_numbers << player_array[:number]
+      end
+    end
+  end
+  return jersey_numbers
+end
+
+
+
+def player_stats(input)
+  game_hash.each do |vs_hash, team_values|
+    team_values.each do |key, value|
+
+      if key == :players
+        value.each do |player|
+
+          if input == player[:player_name]
+            player.delete(:player_name) # having player name inside the hash was a bad idea!
+            return player
+            binding.pry
+          end
+        end
+      end
+    end
+  end
+end
