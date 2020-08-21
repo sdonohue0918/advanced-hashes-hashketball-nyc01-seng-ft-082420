@@ -186,8 +186,8 @@ def player_stats(player_name)
   game_hash.each do |vs_hash, team_values|
     team_values.each do |player_array, player_hash|
 
-      if input == :players
-        value.each do |player|
+      if player_array == :players
+        player_hash.each do |player|
 
           if input == player[:player_name]
             player.delete(:player_name) # having player name inside the hash was a bad idea!
