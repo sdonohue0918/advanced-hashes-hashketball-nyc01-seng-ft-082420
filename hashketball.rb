@@ -192,7 +192,7 @@ def player_stats(input)
           if input == player[:player_name]
             player.delete(:player_name) # having player name inside the hash was a bad idea!
             return player
-            
+
           end
         end
       end
