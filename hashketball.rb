@@ -198,3 +198,7 @@ def player_stats(person)
     end
   end
 end
+
+
+def big_shoe_rebounds
+  game_hash.each do |vs_hash, team_values|
