@@ -210,7 +210,6 @@ def big_shoe_rebounds
         biggest_size = key[:shoe]
         rebounds_for_biggest = key[:rebounds]
       end
-
     end
   end
   return rebounds_for_biggest
