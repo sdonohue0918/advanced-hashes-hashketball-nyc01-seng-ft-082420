@@ -208,8 +208,10 @@ def big_shoe_rebounds
     team_values[:players].each do |key, value|
       if key[:shoe] > biggest_size
         biggest_size = key[:shoe]
+        rebounds_for_biggest = key[:rebounds]
       end
 
     end
   end
+  return rebounds_for_biggest
 end
