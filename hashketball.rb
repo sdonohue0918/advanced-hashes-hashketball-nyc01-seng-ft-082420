@@ -202,6 +202,7 @@ end
 
 def big_shoe_rebounds
   biggest_size = 0
+  rebounds_for_biggest = 0
 
   game_hash.each do |vs_hash, team_values|
     team_values[:players].each do |key, value|
