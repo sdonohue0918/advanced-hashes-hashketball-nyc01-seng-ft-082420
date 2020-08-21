@@ -207,7 +207,7 @@ def big_shoe_rebounds
     team_values.each do |player_array, player_hash|
       binding.pry
       player_hash.each do |player|
-        
+
       end
     end
   end
