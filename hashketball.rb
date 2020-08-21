@@ -208,7 +208,7 @@ def big_shoe_rebounds
       if key[:shoe] > biggest_size
         biggest_size = key[:shoe]
       end
-    binding.pry
+    
     end
   end
 end
