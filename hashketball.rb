@@ -205,4 +205,3 @@ def big_shoe_rebounds
 
   game_hash.each do |vs_hash, team_values|
     team_values.each do |player_array, player_hash|
-      
