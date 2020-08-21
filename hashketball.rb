@@ -206,7 +206,7 @@ def big_shoe_rebounds
   game_hash.each do |vs_hash, team_values|
     team_values[:players].each do |player_array, player_hash|
 
-      end
+
     end
   end
 end
