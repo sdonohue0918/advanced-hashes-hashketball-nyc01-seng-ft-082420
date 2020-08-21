@@ -204,7 +204,7 @@ def big_shoe_rebounds
   biggest_size = nil
 
   game_hash.each do |vs_hash, team_values|
-    team_values.each do |player_array, player_hash|
+    team_values[:players].each do |player_array, player_hash|
       binding.pry
       player_hash.each do |player|
 
