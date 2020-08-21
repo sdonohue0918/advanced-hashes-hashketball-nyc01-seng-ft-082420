@@ -189,7 +189,7 @@ def player_stats(person)
       if player_array == :players
         player_hash.each do |player|
 
-          if input == player[:player_name]
+          if person == player[:player_name]
             player.delete(:player_name)
             return player
 
